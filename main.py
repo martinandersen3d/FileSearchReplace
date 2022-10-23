@@ -23,6 +23,10 @@ def slash():
         return '/'
     if ostype() == 'win32':
         return '\\'
+
+def camel_case(s):
+  s = sub(r"(_|-)+", " ", s).title().replace(" ", "")
+  return ''.join([s[0].lower(), s[1:]])
        
 def ostype():
     import sys
@@ -46,6 +50,9 @@ def createNewFile(oldPath, NewPath, oldWord,newWord):
             file = open(oldPath, "r")
             content = file.read()
             content = content.replace(oldWord, newWord)
+            camelCaseOldWord = camel_case(oldWord)
+            camelCaseNewWord = camel_case(newWord)
+            content = content.replace(camelCaseOldWord, camelCaseNewWord)
             
             file2 = open(NewPath,"w") 
             file2.write(content)
