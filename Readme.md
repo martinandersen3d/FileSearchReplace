@@ -17,6 +17,8 @@ With the content:
 ```
 class HelloWorldController {
 
+var helloWorld = ""
+
 }
 ```
 
@@ -43,9 +45,19 @@ ReplaceWords=[
 From these it will generete the files:
 
 .\ProductController.txt
+
 .\OrderController.txt
+
 .\ProductOrderController.txt
+
 .\UserController.txt
 
 
-In all the new files the word "HelloWorld" is replaced with the correct word
+And the content of the files will be replaced. Example the Product file will have the following content:
+```
+class ProductController {
+
+var product = ""
+
+}
+```
