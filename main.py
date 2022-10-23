@@ -26,9 +26,16 @@ def slash():
         return '\\'
 
 def camel_case(s):
-  s = sub(r"(_|-)+", " ", s).title().replace(" ", "")
-  return ''.join([s[0].lower(), s[1:]])
-       
+    # actually it just lowercase the first letter
+    test_str=s
+    # Using lower() + string slicing
+    # Lowercase first character of String
+    res = test_str[0].lower() + test_str[1:]
+    
+    return str(res)
+
+
+
 def ostype():
     import sys
     if sys.platform.startswith('linux'):
@@ -84,3 +91,5 @@ for path in files:
     # 2. PascalCase
     # 3. snake_case
     # 4. kebab-case
+    
+    
