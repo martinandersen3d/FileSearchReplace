@@ -3,6 +3,7 @@
 from dataclasses import replace
 import os
 from pathlib import Path
+from re import sub
 
 files = [
     "C:\Github\Python\FileSearchReplace\TestFiles\CreateHelloWorldController.txt",
