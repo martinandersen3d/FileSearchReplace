@@ -2,7 +2,7 @@
 
 from dataclasses import replace
 import os
-
+from pathlib import Path
 
 files = [
     "C:\Github\Python\FileSearchReplace\TestFiles\CreateHelloWorldController.txt",
@@ -38,20 +38,24 @@ def ostype():
 
 def createNewFile(oldPath, NewPath, oldWord,newWord):
 
-    try:
+    file_name = Path(oldPath)
+    if file_name.exists():
+        try:
 
-        file = open(oldPath, "r")
-        content = file.read()
-        content = content.replace(oldWord, newWord)
-        
-        file2 = open(NewPath,"w") 
-        file2.write(content)
+            file = open(oldPath, "r")
+            content = file.read()
+            content = content.replace(oldWord, newWord)
+            
+            file2 = open(NewPath,"w") 
+            file2.write(content)
 
-    except Exception as e:
-        print("[ERROR]:",e)
-    finally:
-        file.close()    
-        file2.close()    
+        except Exception as e:
+            print("[ERROR]:",e)
+        finally:
+            file.close()    
+            file2.close()     
+    else:
+        print(f"[ERROR - File does not exist]: {oldPath}") 
 
 for path in files:
     oldPath = path
