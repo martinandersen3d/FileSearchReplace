@@ -68,3 +68,10 @@ for path in files:
         newFilePath = f"{dirname}{slash()}{newFilbaseename}"
         print(newFilePath)
         createNewFile(oldPath, newFilePath, searchWord, word)
+
+
+
+	# 1. camelCase
+    # 2. PascalCase
+    # 3. snake_case
+    # 4. kebab-case
