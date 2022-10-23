@@ -3,9 +3,8 @@ The purpose is to have a file structure with a sample files.
 This script can be used to create multiple files from the sample files, where a given word is replaced in both the new file name, but also inside the new files.
 
 Script will
+- Create new files from current samlpe files
 - Search Replace in files
-- Create new files from 
-
 
 ## Example
 
@@ -49,4 +48,4 @@ From these it will generete the files:
 .\UserController.txt
 
 
-In all the files the word "HelloWorld" is replaced with the correct word
+In all the new files the word "HelloWorld" is replaced with the correct word
